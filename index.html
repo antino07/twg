@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TWG Fragrance — Luxury Hair & Body Care Collection</title>
+
+<!--
+  HOW TO EDIT YOUR LINKS
+  =======================
+  Scroll down to the section marked "EDIT YOUR LINKS HERE" (search for that text).
+  Replace the four link values with your real links.
+-->
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@300;400;500;600&display=swap');
+
+  :root{
+    --black: #0a0908;
+    --charcoal: #161310;
+    --gold-deep: #8a6e3d;
+    --gold: #c6a15b;
+    --gold-bright: #e8c877;
+    --cream: #f3ecdd;
+    --cream-dim: #cfc6b4;
+  }
+
+  *{ margin:0; padding:0; box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    background: var(--black);
+    color: var(--cream);
+    font-family:'Karla', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .divider{
+    width:64px;
+    height:1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin:0 auto;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding: 88px 24px 70px;
+    text-align:center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(198,161,91,0.10), transparent 60%),
+      var(--black);
+    border-bottom: 1px solid rgba(198,161,91,0.25);
+  }
+
+  .eyebrow{
+    font-family:'Marcellus', serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.35em;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .hero h1{
+    font-family:'Marcellus', serif;
+    font-size: clamp(2.8rem, 9vw, 5.2rem);
+    letter-spacing: 0.06em;
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold-deep));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+    line-height:1.05;
+  }
+
+  .hero .sub{
+    margin-top: 14px;
+    font-size: 1.05rem;
+    letter-spacing:0.18em;
+    color: var(--cream-dim);
+  }
+
+  .hero .tagline{
+    font-family:'Marcellus', serif;
+    font-style: italic;
+    color: var(--gold);
+    margin-top: 26px;
+    font-size: 1.15rem;
+  }
+
+  .hero .divider{ margin-top: 26px; }
+
+  /* ---------- PRODUCT IMAGE ---------- */
+  .showcase{
+    padding: 60px 24px 20px;
+    display:flex;
+    justify-content:center;
+  }
+
+  .showcase img{
+    max-width: 480px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(198,161,91,0.2);
+  }
+
+  /* ---------- PRODUCT DETAILS ---------- */
+  .products{
+    max-width: 920px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .product-card{
+    border: 1px solid rgba(198,161,91,0.3);
+    padding: 28px 20px;
+    text-align:center;
+    background: linear-gradient(180deg, rgba(198,161,91,0.05), transparent);
+  }
+
+  .product-card .name{
+    font-family:'Marcellus', serif;
+    font-size: 1.3rem;
+    color: var(--gold-bright);
+    margin-bottom: 6px;
+  }
+
+  .product-card .vol{
+    font-size: 0.85rem;
+    color: var(--cream-dim);
+    letter-spacing: 0.08em;
+  }
+
+  .product-card .price{
+    font-family:'Marcellus', serif;
+    font-size: 1.15rem;
+    color: var(--gold);
+    margin-top: 10px;
+  }
+
+  /* ---------- SET LABEL ---------- */
+  .set-label{
+    max-width: 760px;
+    margin: 34px auto 0;
+    padding: 0 24px;
+    text-align:center;
+  }
+
+  .set-label .pill{
+    display:inline-block;
+    border: 1px solid var(--gold);
+    padding: 12px 30px;
+    font-family:'Marcellus', serif;
+    letter-spacing: 0.12em;
+    font-size: 1rem;
+    color: var(--gold-bright);
+  }
+
+  /* ---------- FEATURES ---------- */
+  .features{
+    max-width: 900px;
+    margin: 70px auto 0;
+    padding: 0 24px 20px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    text-align:center;
+  }
+
+  .feature .icon{
+    width: 46px;
+    height:46px;
+    margin: 0 auto 12px;
+    border: 1px solid var(--gold-deep);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .feature .icon svg{ width:20px; height:20px; stroke: var(--gold-bright); }
+
+  .feature .title{
+    font-size: 0.92rem;
+    color: var(--cream);
+    margin-bottom: 4px;
+  }
+
+  .feature .desc{
+    font-size: 0.8rem;
+    color: var(--cream-dim);
+  }
+
+  /* ---------- AROMA GALLERY ---------- */
+  .aroma-section{
+    max-width: 980px;
+    margin: 80px auto 0;
+    padding: 0 24px;
+    text-align:center;
+  }
+
+  .aroma-section h2{
+    font-family:'Marcellus', serif;
+    font-size: 1.7rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 8px;
+  }
+
+  .aroma-section > p{
+    color: var(--cream-dim);
+    font-size: 0.95rem;
+    margin-bottom: 40px;
+  }
+
+  .aroma-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .aroma-card{
+    border: 1px solid rgba(198,161,91,0.3);
+    background: linear-gradient(180deg, rgba(198,161,91,0.05), transparent);
+    overflow:hidden;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+  }
+
+  .aroma-card .photo{
+    width:100%;
+    aspect-ratio: 4/5;
+    overflow:hidden;
+    background: var(--charcoal);
+  }
+
+  .aroma-card .photo img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    display:block;
+  }
+
+  .aroma-card .body{
+    padding: 18px 18px 22px;
+  }
+
+  .aroma-card .scent-name{
+    font-family:'Marcellus', serif;
+    font-size: 1.15rem;
+    color: var(--gold-bright);
+    margin-bottom: 4px;
+  }
+
+  .aroma-card .scent-desc{
+    font-size: 0.85rem;
+    color: var(--cream-dim);
+  }
+
+  @media (max-width: 720px){
+    .aroma-grid{ grid-template-columns: 1fr; }
+  }
+
+  /* ---------- OFFER BADGE ---------- */
+  .offer{
+    max-width: 420px;
+    margin: 40px auto 0;
+    padding: 0 24px;
+    text-align:center;
+  }
+
+  .offer .box{
+    border: 1px solid var(--gold);
+    padding: 24px;
+    background: linear-gradient(180deg, rgba(198,161,91,0.08), transparent);
+  }
+
+  .offer .label{
+    font-family:'Marcellus', serif;
+    letter-spacing: 0.15em;
+    font-size: 0.85rem;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .offer .price{
+    font-family:'Marcellus', serif;
+    font-size: 2.4rem;
+    color: var(--gold-bright);
+  }
+
+  .offer .regular{
+    color: var(--cream-dim);
+    text-decoration: line-through;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+
+  .offer .save{
+    display:inline-block;
+    margin-top: 10px;
+    padding: 5px 16px;
+    background: #6b1f1f;
+    color: var(--cream);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* ---------- LINKS ---------- */
+  .links-section{
+    max-width: 640px;
+    margin: 80px auto 0;
+    padding: 60px 24px;
+    text-align:center;
+    border-top: 1px solid rgba(198,161,91,0.25);
+  }
+
+  .links-section h2{
+    font-family:'Marcellus', serif;
+    font-size: 1.7rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+
+  .links-section p{
+    color: var(--cream-dim);
+    font-size: 0.95rem;
+    margin-bottom: 34px;
+  }
+
+  .link-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .link-btn{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap: 10px;
+    padding: 16px 18px;
+    border: 1px solid var(--gold-deep);
+    color: var(--cream);
+    font-size: 0.95rem;
+    letter-spacing: 0.03em;
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  }
+
+  .link-btn svg{ width:18px; height:18px; stroke: var(--gold-bright); flex-shrink:0; }
+
+  .link-btn:hover{
+    background: rgba(198,161,91,0.1);
+    border-color: var(--gold-bright);
+    transform: translateY(-2px);
+  }
+
+  .link-btn.primary{
+    grid-column: 1 / -1;
+    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+    color: var(--black);
+    border: none;
+    font-family:'Marcellus', serif;
+    letter-spacing: 0.08em;
+  }
+
+  .link-btn.primary:hover{
+    filter: brightness(1.08);
+    transform: translateY(-2px);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    text-align:center;
+    padding: 40px 24px 60px;
+    color: var(--gold-deep);
+    font-family:'Marcellus', serif;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width: 620px){
+    .products{ grid-template-columns: 1fr 1fr; }
+    .features{ grid-template-columns: 1fr 1fr; }
+  }
+
+  /* accessibility */
+  a:focus-visible, .link-btn:focus-visible{
+    outline: 2px solid var(--gold-bright);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ transition: none !important; scroll-behavior:auto !important; }
+  }
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="eyebrow">TWG</div>
+    <h1>FRAGRANCE</h1>
+    <div class="sub">HAIR & BODY CARE COLLECTION</div>
+    <p class="tagline">Indulge in the finest care for radiant, healthy skin and hair</p>
+    <div class="divider"></div>
+  </section>
+
+  <section class="showcase">
+    <img src="twg-full-lineup.jpeg" alt="TWG Fragrance price list: conditioner, shampoo, 24k body wash, shower gel">
+  </section>
+  <p style="text-align:center; color:var(--cream-dim); font-size:0.85rem; margin-top:-10px; padding:0 24px;">
+    Every bottle is $6.99 / 500ml on its own — or save by getting a set below.
+  </p>
+
+  <!-- ===================== HAIR CARE SET ===================== -->
+  <section class="aroma-section" style="margin-top:60px;">
+    <h2>Hair Care Set</h2>
+    <p>Shampoo + Conditioner, 500ml each</p>
+    <div class="showcase" style="padding-top:0;">
+      <img src="twg-fragrance-poster.jpeg" alt="TWG hair care set: shampoo and conditioner" style="max-width:380px;">
+    </div>
+    <div class="products" style="grid-template-columns: 1fr 1fr; max-width:500px;">
+      <div class="product-card">
+        <div class="name">Shampoo</div>
+        <div class="vol">500ml / bottle</div>
+        <div class="price">$6.99</div>
+      </div>
+      <div class="product-card">
+        <div class="name">Conditioner</div>
+        <div class="vol">500ml / bottle</div>
+        <div class="price">$6.99</div>
+      </div>
+    </div>
+    <div class="offer">
+      <div class="box">
+        <div class="label">Complete Hair Care Set — 2 Bottles</div>
+        <div class="price">$9.99</div>
+        <div class="regular">Regular price: $12.98</div>
+        <span class="save">Save $2.99</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BODY CARE SET ===================== -->
+  <section class="aroma-section" style="margin-top:80px;">
+    <h2>Body Care Set</h2>
+    <p>24K Pure Golden Body Wash + Fragrance Body Wash, 500ml each</p>
+    <div class="showcase" style="padding-top:0;">
+      <img src="twg-body-wash-set.jpeg" alt="TWG body care set: 24k body wash and fragrance body wash" style="max-width:380px;">
+    </div>
+    <div class="products" style="grid-template-columns: 1fr 1fr; max-width:500px;">
+      <div class="product-card">
+        <div class="name">24K Body Wash</div>
+        <div class="vol">500ml / bottle</div>
+        <div class="price">$6.99</div>
+      </div>
+      <div class="product-card">
+        <div class="name">Fragrance Body Wash</div>
+        <div class="vol">500ml / bottle</div>
+        <div class="price">$6.99</div>
+      </div>
+    </div>
+    <div class="offer">
+      <div class="box">
+        <div class="label">Complete Care Set — 2 Bottles</div>
+        <div class="price">$9.99</div>
+        <div class="regular">Regular price: $12.98</div>
+        <span class="save">Save $2.99</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="features">
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 3h6l1 3H8l1-3z"/><path d="M8 6l-2 4v9a2 2 0 002 2h8a2 2 0 002-2v-9l-2-4"/></svg></div>
+      <div class="title">Long-lasting scent</div>
+      <div class="desc">Stay fresh all day</div>
+    </div>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg></div>
+      <div class="title">Gentle & nourishing</div>
+      <div class="desc">For all hair types</div>
+    </div>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <div class="title">24k luxury care</div>
+      <div class="desc">Nourish & strengthen</div>
+    </div>
+    <div class="feature">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 8h18M12 8v13M8 8a2 2 0 012-4h4a2 2 0 012 4"/></svg></div>
+      <div class="title">Elegant packaging</div>
+      <div class="desc">Perfect for gifting</div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       EDIT YOUR LINKS HERE
+       Replace each href value with your real URL.
+       ========================================================= -->
+  <section class="links-section" id="links">
+    <h2>Get the collection</h2>
+    <p>Visit the official site or follow for updates and offers.</p>
+    <div class="link-grid">
+
+      <a class="link-btn primary" href="#" target="_blank" rel="noopener">
+        Visit the official website
+      </a>
+
+      <a class="link-btn" href="https://www.facebook.com/share/1ENkXzvJP1/?mibextid=wwXIfr" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        Facebook
+      </a>
+
+      <a class="link-btn" href="https://t.me/cherri8888" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        Telegram
+      </a>
+
+      <a class="link-btn" href="https://www.tiktok.com/@huarong15?_r=1&_t=ZS-99yira3JEph" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
+        TikTok
+      </a>
+
+    </div>
+  </section>
+  <!-- ========================================================= -->
+
+  <footer>TWG — LUXURY YOU DESERVE</footer>
+
+</body>
+</html>
