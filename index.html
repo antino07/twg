@@ -1,542 +1,2043 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="image.png" type="image/png">
-<title>TWG Fragrance — Luxury Hair & Body Care Collection</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TWG Fragrance — Luxury Hair & Body Care</title>
 
-<!--
-  HOW TO EDIT YOUR LINKS
-  =======================
-  Scroll down to the section marked "EDIT YOUR LINKS HERE" (search for that text).
-  Replace the four link values with your real links.
--->
+  <!-- ============================================================
+       FAVICON
+       ============================================================ -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.png">
 
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@300;400;500;600&display=swap');
+  <!-- ============================================================
+       OPEN GRAPH / LINK PREVIEW
+       ⚠️ Replace yourusername and yourrepo with your actual values
+       ============================================================ -->
+  <meta name="description" content="Luxury hair, body & grooming collection — crafted with 24K gold, caviar extract, and premium botanicals. 5 signature sets available.">
+  <meta name="theme-color" content="#2a2418">
 
-  :root{
-    --black: #0a0908;
-    --charcoal: #161310;
-    --gold-deep: #8a6e3d;
-    --gold: #c6a15b;
-    --gold-bright: #e8c877;
-    --cream: #f3ecdd;
-    --cream-dim: #cfc6b4;
-  }
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="TWG Fragrance">
+  <meta property="og:title" content="TWG Fragrance — Luxury Hair & Body Care">
+  <meta property="og:description" content="Crafted with 24K gold, caviar extract & premium botanicals. Discover all 5 signature sets — Hair Care, Body Wash, Caviar Premium, Caviar Shampoo & Men's Grooming.">
+  <meta property="og:url" content="https://yourusername.github.io/yourrepo/">
+  <meta property="og:image" content="https://yourusername.github.io/yourrepo/twg-preview.png">
+  <meta property="og:image:secure_url" content="https://yourusername.github.io/yourrepo/twg-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:image:alt" content="TWG Fragrance — Full Luxury Collection">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="km_KH">
 
-  *{ margin:0; padding:0; box-sizing:border-box; }
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TWG Fragrance — Luxury Hair & Body Care">
+  <meta name="twitter:description" content="Crafted with 24K gold, caviar extract & premium botanicals. 5 signature luxury sets.">
+  <meta name="twitter:image" content="https://yourusername.github.io/yourrepo/twg-preview.png">
 
-  html{ scroll-behavior:smooth; }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600&family=Kantumruy+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  body{
-    background: var(--black);
-    color: var(--cream);
-    font-family:'Karla', sans-serif;
-    font-weight:300;
-    line-height:1.6;
-    overflow-x:hidden;
-  }
+  <style>
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  a{ color:inherit; text-decoration:none; }
+    :root {
+      --cream: #faf6ee;
+      --cream-2: #f4ecdc;
+      --cream-3: #ede0c9;
+      --sand: #e8dcc4;
+      --ink: #2a2418;
+      --ink-soft: #5a5040;
+      --ink-light: #8a7f6b;
+      --gold: #b8924a;
+      --gold-deep: #8a6e3d;
+      --gold-bright: #d4af6a;
+      --gold-soft: #f0e2c2;
+      --white: #ffffff;
+      --accent: #c97b5a;
+    }
 
-  .divider{
-    width:64px;
-    height:1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    margin:0 auto;
-  }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    padding: 88px 24px 70px;
-    text-align:center;
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(198,161,91,0.10), transparent 60%),
-      var(--black);
-    border-bottom: 1px solid rgba(198,161,91,0.25);
-  }
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  .eyebrow{
-    font-family:'Marcellus', serif;
-    font-size: 2rem;
-    letter-spacing: 0.35em;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
+    /* ---------- Khmer overrides ---------- */
+    body.lang-kh {
+      font-family: 'Kantumruy Pro', 'Inter', sans-serif;
+      line-height: 1.9;
+    }
 
-  .hero h1{
-    font-family:'Marcellus', serif;
-    font-size: clamp(2.8rem, 9vw, 5.2rem);
-    letter-spacing: 0.06em;
-    background: linear-gradient(180deg, var(--gold-bright), var(--gold-deep));
-    -webkit-background-clip:text;
-    background-clip:text;
-    color:transparent;
-    line-height:1.05;
-  }
+    body.lang-kh h1,
+    body.lang-kh h2,
+    body.lang-kh h3,
+    body.lang-kh h4,
+    body.lang-kh .nav-logo,
+    body.lang-kh .footer-logo,
+    body.lang-kh .product-price,
+    body.lang-kh .hero-stat .num,
+    body.lang-kh .collection-value-number,
+    body.lang-kh .cta-link.primary {
+      font-family: 'Kantumruy Pro', 'Fraunces', serif;
+      letter-spacing: 0 !important;
+    }
 
-  .hero .sub{
-    margin-top: 14px;
-    font-size: 1.05rem;
-    letter-spacing:0.18em;
-    color: var(--cream-dim);
-  }
+    body.lang-kh em,
+    body.lang-kh h3 em,
+    body.lang-kh h2 em,
+    body.lang-kh h1 em {
+      font-style: normal !important;
+      font-weight: 500 !important;
+    }
 
-  .hero .tagline{
-    font-family:'Marcellus', serif;
-    font-style: italic;
-    color: var(--gold);
-    margin-top: 26px;
-    font-size: 1.15rem;
-  }
+    body.lang-kh .eyebrow,
+    body.lang-kh .label,
+    body.lang-kh .section-header .label,
+    body.lang-kh .product-number,
+    body.lang-kh .collection-value-label,
+    body.lang-kh .product-price small,
+    body.lang-kh .nav-links a,
+    body.lang-kh .nav-cta,
+    body.lang-kh .btn,
+    body.lang-kh .hero-stat .lbl,
+    body.lang-kh .product-item,
+    body.lang-kh .product-badge,
+    body.lang-kh .cta-label,
+    body.lang-kh .cta-link,
+    body.lang-kh footer .footer-tagline {
+      letter-spacing: 0 !important;
+      text-transform: none;
+      font-size: 0.9rem;
+    }
 
-  .hero .divider{ margin-top: 26px; }
+    body.lang-kh .product-price small,
+    body.lang-kh .collection-value-label {
+      font-size: 0.82rem;
+    }
 
-  /* ---------- PRODUCT IMAGE ---------- */
-  .showcase{
-    padding: 60px 24px 20px;
-    display:flex;
-    justify-content:center;
-  }
+    body.lang-kh .marquee-track span {
+      font-style: normal;
+      letter-spacing: 0 !important;
+    }
 
-  .showcase img{
-    max-width: 480px;
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 0 30px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(198,161,91,0.2);
-  }
+    body.lang-kh .lightbox-caption {
+      font-family: 'Kantumruy Pro', sans-serif;
+      font-style: normal;
+    }
 
-  /* ---------- PRODUCT DETAILS ---------- */
-  .products{
-    max-width: 920px;
-    margin: 40px auto 0;
-    padding: 0 24px;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
 
-  .product-card{
-    border: 1px solid rgba(198,161,91,0.3);
-    padding: 28px 20px;
-    text-align:center;
-    background: linear-gradient(180deg, rgba(198,161,91,0.05), transparent);
-  }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-  .product-card .name{
-    font-family:'Marcellus', serif;
-    font-size: 1.3rem;
-    color: var(--gold-bright);
-    margin-bottom: 6px;
-  }
+    ::selection {
+      background: var(--gold);
+      color: var(--white);
+    }
 
-  .product-card .vol{
-    font-size: 0.85rem;
-    color: var(--cream-dim);
-    letter-spacing: 0.08em;
-  }
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--cream-2); }
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold-bright);
+      border-radius: 5px;
+      border: 2px solid var(--cream-2);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
 
-  .product-card .price{
-    font-family:'Marcellus', serif;
-    font-size: 1.15rem;
-    color: var(--gold);
-    margin-top: 10px;
-  }
+    /* ============================================================
+       NAVIGATION
+       ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 22px 0;
+      background: transparent;
+      transition: background 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
+    }
 
-  /* ---------- SET LABEL ---------- */
-  .set-label{
-    max-width: 760px;
-    margin: 34px auto 0;
-    padding: 0 24px;
-    text-align:center;
-  }
+    .nav.scrolled {
+      background: rgba(250, 246, 238, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 12px 0;
+      box-shadow: 0 1px 0 rgba(184, 146, 74, 0.15), 0 8px 30px rgba(42, 36, 24, 0.04);
+    }
 
-  .set-label .pill{
-    display:inline-block;
-    border: 1px solid var(--gold);
-    padding: 12px 30px;
-    font-family:'Marcellus', serif;
-    letter-spacing: 0.12em;
-    font-size: 1rem;
-    color: var(--gold-bright);
-  }
+    .nav-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-  /* ---------- FEATURES ---------- */
-  .features{
-    max-width: 900px;
-    margin: 70px auto 0;
-    padding: 0 24px 20px;
-    display:grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    text-align:center;
-  }
+    /* Logo image (replaces old "TWG" text) */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
 
-  .feature .icon{
-    width: 46px;
-    height:46px;
-    margin: 0 auto 12px;
-    border: 1px solid var(--gold-deep);
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
+    .nav-logo:hover {
+      transform: scale(1.04);
+      opacity: 0.9;
+    }
 
-  .feature .icon svg{ width:20px; height:20px; stroke: var(--gold-bright); }
+    .nav-logo-img {
+      height: 44px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
 
-  .feature .title{
-    font-size: 0.92rem;
-    color: var(--cream);
-    margin-bottom: 4px;
-  }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
 
-  .feature .desc{
-    font-size: 0.8rem;
-    color: var(--cream-dim);
-  }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      transition: color 0.3s ease;
+      position: relative;
+      padding-bottom: 4px;
+    }
 
-  /* ---------- AROMA GALLERY ---------- */
-  .aroma-section{
-    max-width: 980px;
-    margin: 80px auto 0;
-    padding: 0 24px;
-    text-align:center;
-  }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transition: width 0.3s ease;
+    }
 
-  .aroma-section h2{
-    font-family:'Marcellus', serif;
-    font-size: 1.7rem;
-    color: var(--gold-bright);
-    letter-spacing: 0.04em;
-    margin-bottom: 8px;
-  }
+    .nav-links a:hover { color: var(--gold-deep); }
+    .nav-links a:hover::after { width: 100%; }
 
-  .aroma-section > p{
-    color: var(--cream-dim);
-    font-size: 0.95rem;
-    margin-bottom: 40px;
-  }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
 
-  .aroma-grid{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
-  }
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      background: var(--cream-2);
+      border-radius: 100px;
+      padding: 4px;
+      gap: 2px;
+      border: 1px solid rgba(184, 146, 74, 0.2);
+    }
 
-  .aroma-card{
-    border: 1px solid rgba(198,161,91,0.3);
-    background: linear-gradient(180deg, rgba(198,161,91,0.05), transparent);
-    overflow:hidden;
-    text-align:left;
-    display:flex;
-    flex-direction:column;
-  }
+    .lang-toggle button {
+      background: none;
+      border: none;
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--ink-light);
+      padding: 7px 14px;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      line-height: 1;
+    }
 
-  .aroma-card .photo{
-    width:100%;
-    aspect-ratio: 4/5;
-    overflow:hidden;
-    background: var(--charcoal);
-  }
+    .lang-toggle button.active {
+      background: var(--ink);
+      color: var(--cream);
+    }
 
-  .aroma-card .photo img{
-    width:100%;
-    height:100%;
-    object-fit: cover;
-    display:block;
-  }
+    .lang-toggle button:not(.active):hover { color: var(--ink); }
 
-  .aroma-card .body{
-    padding: 18px 18px 22px;
-  }
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--white);
+      background: var(--ink);
+      padding: 12px 26px;
+      border-radius: 100px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-  .aroma-card .scent-name{
-    font-family:'Marcellus', serif;
-    font-size: 1.15rem;
-    color: var(--gold-bright);
-    margin-bottom: 4px;
-  }
+    .nav-cta::after {
+      content: '→';
+      transition: transform 0.3s ease;
+      font-size: 0.9rem;
+    }
 
-  .aroma-card .scent-desc{
-    font-size: 0.85rem;
-    color: var(--cream-dim);
-  }
+    .nav-cta:hover {
+      background: var(--gold-deep);
+      transform: translateY(-1px);
+    }
 
-  @media (max-width: 720px){
-    .aroma-grid{ grid-template-columns: 1fr; }
-  }
+    .nav-cta:hover::after { transform: translateX(4px); }
 
-  /* ---------- OFFER BADGE ---------- */
-  .offer{
-    max-width: 420px;
-    margin: 40px auto 0;
-    padding: 0 24px;
-    text-align:center;
-  }
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: 1px solid var(--ink);
+      color: var(--ink);
+      font-size: 1.2rem;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
 
-  .offer .box{
-    border: 1px solid var(--gold);
-    padding: 24px;
-    background: linear-gradient(180deg, rgba(198,161,91,0.08), transparent);
-  }
+    .nav-toggle:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
 
-  .offer .label{
-    font-family:'Marcellus', serif;
-    letter-spacing: 0.15em;
-    font-size: 0.85rem;
-    color: var(--gold);
-    margin-bottom: 8px;
-  }
+    /* ============================================================
+       HERO
+       ============================================================ */
+    .hero {
+      padding: 160px 32px 80px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--cream) 0%, var(--cream-2) 100%);
+    }
 
-  .offer .price{
-    font-family:'Marcellus', serif;
-    font-size: 2.4rem;
-    color: var(--gold-bright);
-  }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -10%; right: -5%;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 175, 106, 0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
 
-  .offer .regular{
-    color: var(--cream-dim);
-    text-decoration: line-through;
-    font-size: 0.9rem;
-    margin-top: 4px;
-  }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -20%; left: -10%;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 123, 90, 0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
 
-  .offer .save{
-    display:inline-block;
-    margin-top: 10px;
-    padding: 5px 16px;
-    background: #6b1f1f;
-    color: var(--cream);
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-  }
+    .hero-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
 
-  /* ---------- LINKS ---------- */
-  .links-section{
-    max-width: 640px;
-    margin: 80px auto 0;
-    padding: 60px 24px;
-    text-align:center;
-    border-top: 1px solid rgba(198,161,91,0.25);
-  }
+    .hero-text .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 28px;
+      padding: 8px 18px;
+      background: var(--gold-soft);
+      border-radius: 100px;
+    }
 
-  .links-section h2{
-    font-family:'Marcellus', serif;
-    font-size: 1.7rem;
-    color: var(--gold-bright);
-    letter-spacing: 0.04em;
-    margin-bottom: 10px;
-  }
+    .hero-text .eyebrow::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
 
-  .links-section p{
-    color: var(--cream-dim);
-    font-size: 0.95rem;
-    margin-bottom: 34px;
-  }
+    .hero-text h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(3.2rem, 7.5vw, 5.8rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 28px;
+    }
 
-  .link-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
+    .hero-text h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-deep);
+      display: block;
+    }
 
-  .link-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap: 10px;
-    padding: 16px 18px;
-    border: 1px solid var(--gold-deep);
-    color: var(--cream);
-    font-size: 0.95rem;
-    letter-spacing: 0.03em;
-    transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
-  }
+    .hero-text .tagline {
+      font-size: 1.08rem;
+      color: var(--ink-soft);
+      max-width: 480px;
+      margin-bottom: 40px;
+      line-height: 1.8;
+      font-weight: 300;
+    }
 
-  .link-btn svg{ width:18px; height:18px; stroke: var(--gold-bright); flex-shrink:0; }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
 
-  .link-btn:hover{
-    background: rgba(198,161,91,0.1);
-    border-color: var(--gold-bright);
-    transform: translateY(-2px);
-  }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 34px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
 
-  .link-btn.primary{
-    grid-column: 1 / -1;
-    background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-    color: var(--black);
-    border: none;
-    font-family:'Marcellus', serif;
-    letter-spacing: 0.08em;
-  }
+    .btn-primary { background: var(--ink); color: var(--cream); }
+    .btn-primary:hover {
+      background: var(--gold-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(138, 110, 61, 0.25);
+    }
 
-  .link-btn.primary:hover{
-    filter: brightness(1.08);
-    transform: translateY(-2px);
-  }
+    .btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+    }
+    .btn-outline:hover {
+      background: var(--ink);
+      color: var(--cream);
+      transform: translateY(-2px);
+    }
 
-  /* ---------- FOOTER ---------- */
-  footer{
-    text-align:center;
-    padding: 40px 24px 60px;
-    color: var(--gold-deep);
-    font-family:'Marcellus', serif;
-    letter-spacing: 0.2em;
-    font-size: 0.85rem;
-  }
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 50px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(184, 146, 74, 0.25);
+    }
 
-  /* ---------- RESPONSIVE ---------- */
-  @media (max-width: 620px){
-    .products{ grid-template-columns: 1fr 1fr; }
-    .features{ grid-template-columns: 1fr 1fr; }
-  }
+    .hero-stat .num {
+      font-family: 'Fraunces', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--gold-deep);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
 
-  /* accessibility */
-  a:focus-visible, .link-btn:focus-visible{
-    outline: 2px solid var(--gold-bright);
-    outline-offset: 3px;
-  }
+    .hero-stat .lbl {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
 
-  @media (prefers-reduced-motion: reduce){
-    *{ transition: none !important; scroll-behavior:auto !important; }
-  }
-</style>
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-visual .frame {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      z-index: 1;
+    }
+
+    .hero-visual .frame::before {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      border: 1.5px solid var(--gold);
+      border-radius: 200px 200px 20px 20px;
+      z-index: 0;
+    }
+
+    .hero-visual .frame::after {
+      content: '';
+      position: absolute;
+      inset: -18px;
+      background: var(--gold-soft);
+      border-radius: 200px 200px 20px 20px;
+      z-index: -1;
+      transform: translate(14px, 14px);
+    }
+
+    .hero-carousel {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 180px 180px 12px 12px;
+      overflow: hidden;
+      box-shadow: 0 30px 60px rgba(42, 36, 24, 0.15);
+      background: var(--cream-2);
+    }
+
+    .hero-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 180px 180px 12px 12px;
+      opacity: 0;
+      transform: translateX(30px) scale(1.04);
+      transition: opacity 0.9s ease, transform 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+      cursor: zoom-in;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      z-index: 2;
+    }
+
+    .hero-dots {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 5;
+      background: rgba(250, 246, 238, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 8px 12px;
+      border-radius: 100px;
+    }
+
+    .hero-dots button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background: rgba(184, 146, 74, 0.3);
+      cursor: pointer;
+      padding: 0;
+      transition: background 0.3s ease, transform 0.3s ease, width 0.3s ease;
+    }
+
+    .hero-dots button:hover {
+      background: var(--gold);
+      transform: scale(1.2);
+    }
+
+    .hero-dots button.active {
+      background: var(--gold-deep);
+      width: 26px;
+      border-radius: 5px;
+    }
+
+    .hero-badge {
+      position: absolute;
+      background: var(--white);
+      border-radius: 100px;
+      padding: 12px 20px;
+      box-shadow: 0 15px 40px rgba(42, 36, 24, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--ink);
+      animation: floaty 5s ease-in-out infinite;
+      z-index: 5;
+    }
+
+    .hero-badge .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .hero-badge.b1 { top: 12%; left: -8%; animation-delay: 0s; }
+    .hero-badge.b2 { bottom: 18%; right: -6%; animation-delay: 2.5s; }
+
+    @keyframes floaty {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* ============================================================
+       MARQUEE
+       ============================================================ */
+    .marquee {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 22px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+      gap: 60px;
+      animation: scroll 30s linear infinite;
+    }
+
+    .marquee-track span {
+      font-family: 'Fraunces', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .marquee-track span::after {
+      content: '✦';
+      color: var(--gold-bright);
+      font-style: normal;
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ============================================================
+       SECTION HELPERS
+       ============================================================ */
+    .section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 110px 32px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .section-header .label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 20px;
+      padding: 7px 16px;
+      background: var(--gold-soft);
+      border-radius: 100px;
+    }
+
+    .section-header .label::before {
+      content: '';
+      width: 6px; height: 6px;
+      background: var(--gold);
+      border-radius: 50%;
+    }
+
+    .section-header h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header h2 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--gold-deep);
+    }
+
+    .section-header p {
+      max-width: 560px;
+      margin: 20px auto 0;
+      color: var(--ink-soft);
+      font-size: 1rem;
+    }
+
+    /* ============================================================
+       PRODUCTS
+       ============================================================ */
+    .product {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+      margin-bottom: 110px;
+      padding: 50px;
+      background: var(--white);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(42, 36, 24, 0.06);
+      position: relative;
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+    }
+
+    .product:hover {
+      box-shadow: 0 30px 80px rgba(42, 36, 24, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .product:last-of-type { margin-bottom: 0; }
+    .product.reverse { direction: rtl; }
+    .product.reverse > * { direction: ltr; }
+
+    .product-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .product-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 16px;
+      cursor: zoom-in;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .product-image img:hover { transform: scale(1.04); }
+
+    .product-info .product-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 18px;
+    }
+
+    .product-info .product-number::before {
+      content: '';
+      width: 24px; height: 1.5px;
+      background: var(--gold);
+    }
+
+    .product-info h3 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .product-info h3 em {
+      font-style: italic;
+      color: var(--gold-deep);
+      font-weight: 300;
+    }
+
+    .product-info .description {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin-bottom: 28px;
+      max-width: 460px;
+      line-height: 1.8;
+    }
+
+    .product-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .product-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cream-2);
+      padding: 8px 16px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--ink-soft);
+      border-radius: 100px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .product-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .product-item:hover { background: var(--gold-soft); color: var(--ink); }
+
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+      padding-top: 24px;
+      border-top: 1px solid var(--cream-3);
+    }
+
+    .product-price {
+      font-family: 'Fraunces', serif;
+      font-size: 3rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .product-price small {
+      font-size: 0.78rem;
+      color: var(--ink-light);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 8px;
+    }
+
+    .product-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--gold-soft);
+      color: var(--gold-deep);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 100px;
+    }
+
+    .product-badge::before {
+      content: '★';
+      font-size: 0.7rem;
+    }
+
+    /* ============================================================
+       FULL COLLECTION SHOWCASE
+       ============================================================ */
+    .collection-showcase {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      padding: 50px;
+      margin-bottom: 110px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, var(--cream-2) 0%, var(--cream-3) 100%);
+      border: 1px solid rgba(184, 146, 74, 0.25);
+      box-shadow: 0 20px 60px rgba(42, 36, 24, 0.08);
+      position: relative;
+      overflow: hidden;
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+    }
+
+    .collection-showcase::before {
+      content: 'FEATURED';
+      position: absolute;
+      top: 22px;
+      left: -34px;
+      transform: rotate(-45deg);
+      background: var(--gold-deep);
+      color: var(--cream);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      padding: 6px 40px;
+      z-index: 2;
+    }
+
+    body.lang-kh .collection-showcase::before {
+      content: 'ពិសេស';
+      letter-spacing: 0 !important;
+      font-family: 'Kantumruy Pro', sans-serif;
+    }
+
+    .collection-showcase:hover {
+      box-shadow: 0 30px 80px rgba(42, 36, 24, 0.12);
+      transform: translateY(-4px);
+    }
+
+    .collection-showcase-image {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .collection-showcase-image img {
+      width: 100%;
+      max-width: 480px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(42, 36, 24, 0.15);
+      cursor: zoom-in;
+      transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .collection-showcase-image img:hover { transform: scale(1.03); }
+
+    .collection-showcase-info .product-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 18px;
+    }
+
+    .collection-showcase-info .product-number::before {
+      content: '';
+      width: 24px; height: 1.5px;
+      background: var(--gold);
+    }
+
+    .collection-showcase-info h3 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+      font-weight: 400;
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .collection-showcase-info h3 em {
+      font-style: italic;
+      color: var(--gold-deep);
+      font-weight: 300;
+    }
+
+    .collection-showcase-info .description {
+      color: var(--ink-soft);
+      font-size: 0.98rem;
+      margin-bottom: 28px;
+      max-width: 460px;
+      line-height: 1.8;
+    }
+
+    .collection-price-row {
+      gap: 32px;
+      flex-wrap: wrap;
+      align-items: flex-end;
+    }
+
+    .collection-value {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .collection-value-label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+    }
+
+    .collection-value-number {
+      font-family: 'Fraunces', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .collection-price-row .product-price {
+      padding-left: 32px;
+      border-left: 1px solid var(--cream-3);
+    }
+
+    /* ============================================================
+       FEATURES
+       ============================================================ */
+    .features {
+      background: linear-gradient(180deg, var(--cream-2) 0%, var(--cream) 100%);
+      border-top: 1px solid rgba(184, 146, 74, 0.15);
+      border-bottom: 1px solid rgba(184, 146, 74, 0.15);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+
+    .feature {
+      background: var(--white);
+      padding: 40px 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 10px 30px rgba(42, 36, 24, 0.04);
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 25px 50px rgba(42, 36, 24, 0.1);
+    }
+
+    .feature-icon {
+      width: 64px; height: 64px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      background: var(--gold-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .feature:hover .feature-icon {
+      background: var(--gold);
+      transform: rotate(-8deg) scale(1.05);
+    }
+
+    .feature-icon svg {
+      width: 28px; height: 28px;
+      stroke: var(--gold-deep);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: stroke 0.3s ease;
+    }
+
+    .feature:hover .feature-icon svg { stroke: var(--white); }
+
+    .feature h4 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 0.88rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ============================================================
+       CTA
+       ============================================================ */
+    .cta-section {
+      padding: 120px 32px;
+      background: var(--ink);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(212, 175, 106, 0.15) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .cta-inner {
+      max-width: 780px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-inner .cta-label {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold-bright);
+      margin-bottom: 22px;
+      padding: 7px 18px;
+      border: 1px solid rgba(212, 175, 106, 0.4);
+      border-radius: 100px;
+    }
+
+    .cta-inner h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(2.2rem, 5vw, 3.6rem);
+      font-weight: 400;
+      color: var(--cream);
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+    }
+
+    .cta-inner h2 em {
+      font-style: italic;
+      color: var(--gold-bright);
+      font-weight: 300;
+    }
+
+    .cta-inner p {
+      color: #c8bfae;
+      font-size: 1.02rem;
+      margin-bottom: 48px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .cta-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 22px;
+      border: 1.5px solid rgba(212, 175, 106, 0.3);
+      color: var(--cream);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      border-radius: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-link svg {
+      width: 18px; height: 18px;
+      stroke: var(--gold-bright);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-link:hover {
+      background: rgba(212, 175, 106, 0.1);
+      border-color: var(--gold-bright);
+      transform: translateY(-2px);
+    }
+
+    .cta-link:hover svg { transform: scale(1.15); }
+
+    .cta-link.primary {
+      grid-column: 1 / -1;
+      background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+      color: var(--ink);
+      border: none;
+      font-family: 'Fraunces', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      padding: 20px 24px;
+    }
+
+    .cta-link.primary:hover {
+      filter: brightness(1.06);
+      box-shadow: 0 20px 45px rgba(212, 175, 106, 0.3);
+    }
+
+    /* ============================================================
+       FOOTER
+       ============================================================ */
+    footer {
+      background: var(--ink);
+      text-align: center;
+      padding: 50px 32px 40px;
+      border-top: 1px solid rgba(212, 175, 106, 0.15);
+    }
+
+    footer .footer-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    footer .footer-logo-img {
+      height: 52px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      /* Invert dark logo to gold — remove this line if your logo is already light */
+      filter: brightness(0) invert(0.85) sepia(1) saturate(4) hue-rotate(3deg);
+    }
+
+    footer .footer-tagline {
+      color: #a89e8b;
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    /* ============================================================
+       LIGHTBOX
+       ============================================================ */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(42, 36, 24, 0.92);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+
+    .lightbox.active { opacity: 1; visibility: visible; }
+
+    .lightbox img {
+      max-width: 92vw;
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      border-radius: 12px;
+      background: var(--white);
+      padding: 12px;
+      box-shadow: 0 40px 120px rgba(0, 0, 0, 0.5);
+      transform: scale(0.94);
+      transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .lightbox.active img { transform: scale(1); }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px; right: 28px;
+      width: 48px; height: 48px;
+      border: 1.5px solid rgba(250, 246, 238, 0.5);
+      border-radius: 50%;
+      background: rgba(42, 36, 24, 0.5);
+      color: var(--cream);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10000;
+      line-height: 1;
+    }
+
+    .lightbox-close:hover {
+      background: var(--cream);
+      color: var(--ink);
+      border-color: var(--cream);
+      transform: rotate(90deg);
+    }
+
+    .lightbox-caption {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--cream);
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 1rem;
+      letter-spacing: 0.05em;
+      text-align: center;
+      padding: 0 20px;
+      max-width: 90vw;
+      pointer-events: none;
+    }
+
+    body.lightbox-open { overflow: hidden; }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1024px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+      }
+
+      .hero-text .eyebrow,
+      .hero-text .tagline { margin-left: auto; margin-right: auto; }
+      .hero-actions,
+      .hero-stats { justify-content: center; }
+
+      .product {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 30px;
+      }
+
+      .product.reverse { direction: ltr; }
+      .product-info { text-align: center; }
+      .product-info .description { margin-left: auto; margin-right: auto; }
+      .product-items,
+      .product-price-row { justify-content: center; }
+
+      .collection-showcase {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 40px 30px;
+        text-align: center;
+      }
+
+      .collection-showcase-info .description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .collection-showcase-info .product-items,
+      .collection-showcase-info .product-price-row {
+        justify-content: center;
+      }
+
+      .collection-price-row .product-price {
+        padding-left: 0;
+        border-left: none;
+      }
+
+      .features-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links,
+      .nav-cta { display: none; }
+
+      .nav-toggle { display: flex; }
+
+      .nav-links.mobile-open {
+        display: flex;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        flex-direction: column;
+        background: var(--cream);
+        padding: 24px 32px;
+        gap: 20px;
+        box-shadow: 0 20px 40px rgba(42, 36, 24, 0.08);
+        border-top: 1px solid rgba(184, 146, 74, 0.15);
+      }
+
+      .section { padding: 80px 22px; }
+      .hero { padding: 130px 22px 60px; }
+      .hero-stats { gap: 24px; flex-wrap: wrap; }
+      .hero-badge { display: none; }
+
+      .cta-links { grid-template-columns: 1fr; }
+      .cta-link.primary { grid-column: 1; }
+
+      .lightbox-close {
+        top: 14px; right: 14px;
+        width: 42px; height: 42px;
+        font-size: 1.3rem;
+      }
+
+      .hero-dots { bottom: 16px; padding: 6px 10px; }
+
+      .lang-toggle button { padding: 6px 10px; font-size: 0.68rem; }
+
+      .nav-logo-img { height: 36px; }
+    }
+
+    @media (max-width: 520px) {
+      .features-grid { grid-template-columns: 1fr; }
+      .product { padding: 30px 22px; }
+      .product-price { font-size: 2.4rem; }
+      .hero-text h1 { font-size: 2.8rem; }
+      .nav-logo-img { height: 32px; }
+      footer .footer-logo-img { height: 44px; }
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold-deep);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+        animation: none !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <!-- ================= NAVIGATION ================= -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+
+      <!-- Logo image -->
+      <a href="#" class="nav-logo" aria-label="TWG Fragrance home">
+        <img src="logo.png" alt="TWG Fragrance logo" class="nav-logo-img">
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#collection" data-en="Collection" data-kh="បណ្តុំផលិតផល">Collection</a></li>
+        <li><a href="#features" data-en="Why TWG" data-kh="ហេតុអ្វី TWG">Why TWG</a></li>
+        <li><a href="#connect" data-en="Connect" data-kh="ទំនាក់ទំនង">Connect</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+          <button type="button" id="btnEn" class="active">EN</button>
+          <button type="button" id="btnKh">ខ្មែរ</button>
+        </div>
+        <a href="#connect" class="nav-cta" data-en="Shop Now" data-kh="ទិញឥឡូវ">Shop Now</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
   <section class="hero">
-    <div class="eyebrow">TWG</div>
-    <h1>FRAGRANCE</h1>
-    <div class="sub">HAIR & BODY CARE COLLECTION</div>
-    <p class="tagline">Indulge in the finest care for radiant, healthy skin and hair</p>
-    <div class="divider"></div>
-  </section>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow" data-en="TWG Fragrance" data-kh="TWG ក្រុមហ៊ុនសាប៊ូទឹកអប់">TWG Fragrance</div>
+        <h1>
+          <span data-en="Everyday" data-kh="ភាពប្រណិត">Everyday</span>
+          <em data-en="Luxury" data-kh="រាល់ថ្ងៃ">Luxury</em>
+        </h1>
+        <p class="tagline"
+           data-en="A bright, modern collection of hair and body care crafted with 24K gold, caviar extract, and premium botanicals — for skin and hair that feel as good as they look."
+           data-kh="បណ្តុំផលិតផលថែរក្សាសក់ និងរាងកាយបែបទំនើប ផលិតឡើងដោយមាស 24K កាវៀ និងរុក្ខជាតិធម្មជាតិដ៏មានតម្លៃ — សម្រាប់ស្បែក និងសក់ដែលមើលទៅស្រស់ស្អាត និងមានសុខភាពល្អ។">
+          A bright, modern collection of hair and body care crafted with 24K gold, caviar extract, and premium botanicals — for skin and hair that feel as good as they look.
+        </p>
+        <div class="hero-actions">
+          <a href="#collection" class="btn btn-primary" data-en="Explore Collection" data-kh="រកមើលបណ្តុំ">Explore Collection</a>
+          <a href="#connect" class="btn btn-outline" data-en="Get in Touch" data-kh="ទាក់ទងយើង">Get in Touch</a>
+        </div>
 
-  <section class="showcase">
-    <img src="twg-full-lineup.jpeg" alt="TWG Fragrance price list: conditioner, shampoo, 24k body wash, shower gel">
-  </section>
-  <p style="text-align:center; color:var(--cream-dim); font-size:0.85rem; margin-top:-10px; padding:0 24px;">
-    Every bottle is $6.99 / 500ml on its own — or save by getting a set below.
-  </p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">5</div>
+            <div class="lbl" data-en="Signature Sets" data-kh="ឈុតពិសេស">Signature Sets</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">24K</div>
+            <div class="lbl" data-en="Gold Infused" data-kh="លាយមាស">Gold Infused</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">100%</div>
+            <div class="lbl" data-en="Salon Quality" data-kh="គុណភាពសាឡន">Salon Quality</div>
+          </div>
+        </div>
+      </div>
 
-  <!-- ===================== HAIR CARE SET ===================== -->
-  <section class="aroma-section" style="margin-top:60px;">
-    <h2>Hair Care Set</h2>
-    <p>Shampoo + Conditioner, 500ml each</p>
-    <div class="showcase" style="padding-top:0;">
-      <img src="twg-fragrance-poster.jpeg" alt="TWG hair care set: shampoo and conditioner" style="max-width:380px;">
-    </div>
-    <div class="products" style="grid-template-columns: 1fr 1fr; max-width:500px;">
-      <div class="product-card">
-        <div class="name">Shampoo</div>
-        <div class="vol">500ml / bottle</div>
-        <div class="price">$6.99</div>
-      </div>
-      <div class="product-card">
-        <div class="name">Conditioner</div>
-        <div class="vol">500ml / bottle</div>
-        <div class="price">$6.99</div>
-      </div>
-    </div>
-    <div class="offer">
-      <div class="box">
-        <div class="label">Complete Hair Care Set — 2 Bottles</div>
-        <div class="price">$9.99</div>
-        <div class="regular">Regular price: $12.98</div>
-        <span class="save">Save $2.99</span>
-      </div>
-    </div>
-  </section>
+      <div class="hero-visual">
+        <div class="frame">
+          <div class="hero-badge b1"><span class="dot"></span> <span data-en="24K Gold Care" data-kh="ការថែទាំមាស 24K">24K Gold Care</span></div>
+          <div class="hero-badge b2"><span class="dot"></span> <span data-en="Cruelty Free" data-kh="មិនសាកល្បងលើសត្វ">Cruelty Free</span></div>
 
-  <!-- ===================== BODY CARE SET ===================== -->
-  <section class="aroma-section" style="margin-top:80px;">
-    <h2>Body Care Set</h2>
-    <p>24K Pure Golden Body Wash + Fragrance Body Wash, 500ml each</p>
-    <div class="showcase" style="padding-top:0;">
-      <img src="twg-body-wash-set.jpeg" alt="TWG body care set: 24k body wash and fragrance body wash" style="max-width:380px;">
-    </div>
-    <div class="products" style="grid-template-columns: 1fr 1fr; max-width:500px;">
-      <div class="product-card">
-        <div class="name">24K Body Wash</div>
-        <div class="vol">500ml / bottle</div>
-        <div class="price">$6.99</div>
-      </div>
-      <div class="product-card">
-        <div class="name">Fragrance Body Wash</div>
-        <div class="vol">500ml / bottle</div>
-        <div class="price">$6.99</div>
-      </div>
-    </div>
-    <div class="offer">
-      <div class="box">
-        <div class="label">Complete Care Set — 2 Bottles</div>
-        <div class="price">$9.99</div>
-        <div class="regular">Regular price: $12.98</div>
-        <span class="save">Save $2.99</span>
+          <div class="hero-carousel" id="heroCarousel">
+            <img src="twg-banner-collection.png"  alt="TWG Fragrance full collection"     class="hero-slide active" data-lightbox>
+            <img src="twg-haircare-set-12.png"    alt="TWG Luxury Hair Care Set"          class="hero-slide"        data-lightbox>
+            <img src="twg-bodywash-24k-set.png"   alt="TWG 24K Pure Golden Body Wash Set" class="hero-slide"        data-lightbox>
+            <img src="twg-caviar-set.png"         alt="TWG Caviar Premium Hair Care Set"  class="hero-slide"        data-lightbox>
+            <img src="twg-caviar-shampoo-set.png" alt="TWG Caviar Shampoo Set"            class="hero-slide"        data-lightbox>
+            <img src="twg-men-shower-set.png"     alt="TWG Men Shower Gel Set"            class="hero-slide"        data-lightbox>
+          </div>
+
+          <div class="hero-dots" id="heroDots" role="tablist" aria-label="Product slideshow"></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="features">
-    <div class="feature">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 3h6l1 3H8l1-3z"/><path d="M8 6l-2 4v9a2 2 0 002 2h8a2 2 0 002-2v-9l-2-4"/></svg></div>
-      <div class="title">Long-lasting scent</div>
-      <div class="desc">Stay fresh all day</div>
-    </div>
-    <div class="feature">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C8 6 5 10 5 14a7 7 0 0014 0c0-4-3-8-7-12z"/></svg></div>
-      <div class="title">Gentle & nourishing</div>
-      <div class="desc">For all hair types</div>
-    </div>
-    <div class="feature">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-      <div class="title">24k luxury care</div>
-      <div class="desc">Nourish & strengthen</div>
-    </div>
-    <div class="feature">
-      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 8h18M12 8v13M8 8a2 2 0 012-4h4a2 2 0 012 4"/></svg></div>
-      <div class="title">Elegant packaging</div>
-      <div class="desc">Perfect for gifting</div>
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span data-en="Cleanse" data-kh="សម្អាត">Cleanse</span>
+      <span data-en="Nourish" data-kh="ចិញ្ចឹម">Nourish</span>
+      <span data-en="Smooth" data-kh="រលោង">Smooth</span>
+      <span data-en="Fragrance" data-kh="ក្លិនក្រអូប">Fragrance</span>
+      <span data-en="Repair" data-kh="ជួសជុល">Repair</span>
+      <span data-en="Shine" data-kh="ភ្លឺថ្លា">Shine</span>
+      <span data-en="Cleanse" data-kh="សម្អាត">Cleanse</span>
+      <span data-en="Nourish" data-kh="ចិញ្ចឹម">Nourish</span>
+      <span data-en="Smooth" data-kh="រលោង">Smooth</span>
+      <span data-en="Fragrance" data-kh="ក្លិនក្រអូប">Fragrance</span>
+      <span data-en="Repair" data-kh="ជួសជុល">Repair</span>
+      <span data-en="Shine" data-kh="ភ្លឺថ្លា">Shine</span>
     </div>
   </div>
 
-  <!-- =========================================================
-       EDIT YOUR LINKS HERE
-       Replace each href value with your real URL.
-       ========================================================= -->
-  <section class="links-section" id="links">
-    <h2>Get the collection</h2>
-    <p>Visit the official site or follow for updates and offers.</p>
-    <div class="link-grid">
+  <!-- ================= COLLECTION ================= -->
+  <section class="section" id="collection">
+    <div class="section-header">
+      <span class="label" data-en="The Collection" data-kh="បណ្តុំផលិតផល">The Collection</span>
+      <h2>
+        <span data-en="Made for" data-kh="សម្រាប់">Made for</span>
+        <em data-en="Every Ritual" data-kh="សេតទាំងអស់">Every Ritual</em>
+      </h2>
+      <p data-en="From daily essentials to indulgent treatments — discover a set for every moment."
+         data-kh="ចាប់ពីរបស់ប្រើប្រាស់ចាំបាច់ប្រចាំថ្ងៃ រហូតដល់ការថែរក្សាដ៏ពិសេស — សូមស្វែងរកឈុតផលិតផលដែលសាកសមសម្រាប់គ្រប់ពេលវេលា។">
+        From daily essentials to indulgent treatments — discover a set for every moment.
+      </p>
+    </div>
 
-      <a class="link-btn primary" href="#" target="_blank" rel="noopener">
-        Visit the official website
-      </a>
+    <!-- ============ FULL COLLECTION SHOWCASE ============ -->
+    <div class="collection-showcase">
+      <div class="collection-showcase-image">
+        <img src="twg-banner-collection.png" alt="TWG Fragrance full collection — all sets" data-lightbox>
+      </div>
+      <div class="collection-showcase-info">
+        <div class="product-number" data-en="00 — The Full Collection" data-kh="០០ — បណ្តុំពេញលេញ">00 — The Full Collection</div>
+        <h3>
+          <span data-en="Complete" data-kh="ពេញលេញ">Complete</span>
+          <em data-en="TWG Fragrance" data-kh="TWG ក្រុមហ៊ុនទឹកអប់">TWG Fragrance</em>
+          <span data-en="Lineup" data-kh="បណ្តុំ">Lineup</span>
+        </h3>
+        <p class="description"
+           data-en="Explore every set in one view — from 24K Golden Body Wash to Caviar Premium Hair Care. Five signature collections crafted for hair, body, and grooming."
+           data-kh="ស្វែងរកគ្រប់ឈុតក្នុងទិដ្ឋភាពតែមួយ — ពីសាប៊ូដុសខ្លួនមាស 24K ដល់ការថែរក្សាសក់កាវៀពិសេស។ បណ្តុំពិសេសចំនួនប្រាំ សម្រាប់សក់ រាងកាយ និងការតុបតែង។">
+          Explore every set in one view — from 24K Golden Body Wash to Caviar Premium Hair Care. Five signature collections crafted for hair, body, and grooming.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Hair Care" data-kh="ថែរក្សាសក់">Hair Care</span>
+          <span class="product-item" data-en="Body Wash" data-kh="សាប៊ូដុសខ្លួន">Body Wash</span>
+          <span class="product-item" data-en="Caviar Premium" data-kh="កាវៀពិសេស">Caviar Premium</span>
+          <span class="product-item" data-en="Caviar Shampoo" data-kh="សាប៊ូកក់សក់កាវៀ">Caviar Shampoo</span>
+          <span class="product-item" data-en="Men's Grooming" data-kh="ការតុបតែងបុរស">Men's Grooming</span>
+        </div>
+        <div class="product-price-row collection-price-row">
+          <div class="collection-value">
+            <div class="collection-value-label" data-en="Collection Includes" data-kh="បណ្តុំរួមមាន">Collection Includes</div>
+            <div class="collection-value-number" data-en="5 Signature Sets" data-kh="ឈុតពិសេស ៥">5 Signature Sets</div>
+          </div>
+          <div class="product-price">
+            $20
+            <small data-en="Complete Bundle" data-kh="កញ្ចប់ពេញលេញ">Complete Bundle</small>
+          </div>
+          <span class="product-badge" data-en="Full Lineup" data-kh="បណ្តុំពេញលេញ">Full Lineup</span>
+        </div>
+      </div>
+    </div>
 
-      <a class="link-btn" href="https://www.facebook.com/share/1ENkXzvJP1/?mibextid=wwXIfr" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-        Facebook
-      </a>
+    <!-- 1. HAIR CARE SET -->
+    <div class="product">
+      <div class="product-image">
+        <img src="twg-haircare-set-12.png" alt="TWG luxury hair care set: shampoo and conditioner" data-lightbox>
+      </div>
+      <div class="product-info">
+        <div class="product-number" data-en="01 — Hair Care" data-kh="០១ — ថែរក្សាសក់">01 — Hair Care</div>
+        <h3>
+          <span data-en="Luxury" data-kh="ប្រណិត">Luxury</span>
+          <em data-en="Hair Care" data-kh="ថែរក្សាសក់">Hair Care</em>
+          <span data-en="Set" data-kh="ឈុត">Set</span>
+        </h3>
+        <p class="description"
+           data-en="A complete shampoo and conditioner duo that cleanses, nourishes, and restores shine — leaving hair soft, smooth, and beautifully scented."
+           data-kh="ឈុតសាប៊ូកក់សក់ និងគ្រីមបំប៉នពេញលេញ ដែលសម្អាត ចិញ្ចឹម និងស្តារភាពភ្លឺថ្លា — ធ្វើឱ្យសក់ទន់ រលោង និងមានក្លិនក្រអូបស្រស់ស្អាត។">
+          A complete shampoo and conditioner duo that cleanses, nourishes, and restores shine — leaving hair soft, smooth, and beautifully scented.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Shampoo · 500ml" data-kh="សាប៊ូកក់សក់ · 500ml">Shampoo · 500ml</span>
+          <span class="product-item" data-en="Conditioner · 500ml" data-kh="គ្រីមបំប៉ន · 500ml">Conditioner · 500ml</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">$12 <small data-en="Set of 2" data-kh="ឈុត ២">Set of 2</small></div>
+          <span class="product-badge" data-en="Best Value" data-kh="តម្លៃល្អបំផុត">Best Value</span>
+        </div>
+      </div>
+    </div>
 
-      <a class="link-btn" href="https://t.me/twg_fragrance_bot" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        Telegram
-      </a>
+    <!-- 2. 24K BODY WASH -->
+    <div class="product reverse">
+      <div class="product-image">
+        <img src="twg-bodywash-24k-set.png" alt="TWG 24K Pure Golden Body Wash set, two bottles" data-lightbox>
+      </div>
+      <div class="product-info">
+        <div class="product-number" data-en="02 — Body Care" data-kh="០២ — ថែរក្សារាងកាយ">02 — Body Care</div>
+        <h3>
+          <span data-en="24K Pure" data-kh="មាស 24K">24K Pure</span>
+          <em data-en="Golden" data-kh="មាសសុទ្ធ">Golden</em>
+          <span data-en="Body Wash" data-kh="សាប៊ូដុសខ្លួន">Body Wash</span>
+        </h3>
+        <p class="description"
+           data-en="Two luxurious finishes infused with golden shimmer. Deep-cleansing yet gentle, leaving skin brightened, nourished, and delicately fragranced."
+           data-kh="ពីរប្រភេទដ៏ប្រណិត លាយជាមួយពន្លឺមាស។ សម្អាតជ្រៅ ប៉ុន្តែទន់ភ្លន់ ធ្វើឱ្យស្បែកភ្លឺថ្លា ចិញ្ចឹម និងមានក្លិនក្រអូបឆើតឆាយ។">
+          Two luxurious finishes infused with golden shimmer. Deep-cleansing yet gentle, leaving skin brightened, nourished, and delicately fragranced.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Classic Gold · 500ml" data-kh="មាសបុរាណ · 500ml">Classic Gold · 500ml</span>
+          <span class="product-item" data-en="Shimmer Gold · 500ml" data-kh="មាសភ្លឺ · 500ml">Shimmer Gold · 500ml</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">$9.99 <small data-en="Set of 2" data-kh="ឈុត ២">Set of 2</small></div>
+        </div>
+      </div>
+    </div>
 
-      <a class="link-btn" href="https://www.tiktok.com/@huarong15?_r=1&_t=ZS-99yira3JEph" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 12a4 4 0 104 4V4a5 5 0 005 5"/></svg>
-        TikTok
-      </a>
+    <!-- 3. CAVIAR PREMIUM SET -->
+    <div class="product">
+      <div class="product-image">
+        <img src="twg-caviar-set.png" alt="TWG Caviar premium hair care set: shampoo, conditioner, hair mask" data-lightbox>
+      </div>
+      <div class="product-info">
+        <div class="product-number" data-en="03 — Premium Ritual" data-kh="០៣ — ការថែទាំពិសេស">03 — Premium Ritual</div>
+        <h3>
+          <span data-en="Caviar" data-kh="កាវៀ">Caviar</span>
+          <em data-en="Premium" data-kh="ពិសេស">Premium</em>
+          <span data-en="Hair Care" data-kh="ថែរក្សាសក់">Hair Care</span>
+        </h3>
+        <p class="description"
+           data-en="The ultimate salon-quality trio enriched with caviar extract and macadamia seed oil. Deeply repairs damaged hair and restores a healthy, glossy finish."
+           data-kh="ឈុតបីដ៏ល្អឥតខ្ចោះ គុណភាពសាឡន សម្បូរទៅដោយសារធាតុកាវៀ និងប្រេងគ្រាប់ម៉ាកាដាមៀ។ ជួសជុលសក់ដែលខូចខាតយ៉ាងជ្រៅ និងស្តារភាពរលោងភ្លឺថ្លាឡើងវិញ។">
+          The ultimate salon-quality trio enriched with caviar extract and macadamia seed oil. Deeply repairs damaged hair and restores a healthy, glossy finish.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Caviar Shampoo · 500ml" data-kh="សាប៊ូកក់សក់កាវៀ · 500ml">Caviar Shampoo · 500ml</span>
+          <span class="product-item" data-en="Caviar Conditioner · 500ml" data-kh="គ្រីមបំប៉នកាវៀ · 500ml">Caviar Conditioner · 500ml</span>
+          <span class="product-item" data-en="Caviar Hair Mask · 500g" data-kh="ម៉ាស់សក់កាវៀ · 500g">Caviar Hair Mask · 500g</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">$25 <small data-en="Set of 3" data-kh="ឈុត ៣">Set of 3</small></div>
+          <span class="product-badge" data-en="Special Set" data-kh="ឈុតពិសេស">Special Set</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- 4. CAVIAR SHAMPOO SET -->
+    <div class="product reverse">
+      <div class="product-image">
+        <img src="twg-caviar-shampoo-set.png" alt="TWG Caviar Shampoo set, two bottles" data-lightbox>
+      </div>
+      <div class="product-info">
+        <div class="product-number" data-en="04 — Caviar Duo" data-kh="០៤ — គូកាវៀ">04 — Caviar Duo</div>
+        <h3>
+          <span data-en="Caviar" data-kh="កាវៀ">Caviar</span>
+          <em data-en="Shampoo" data-kh="សាប៊ូកក់សក់">Shampoo</em>
+          <span data-en="Set" data-kh="ឈុត">Set</span>
+        </h3>
+        <p class="description"
+           data-en="Two bottles of our best-selling Caviar Shampoo. Silky care with an elegant aroma for a refreshing, salon-quality cleanse every day."
+           data-kh="សាប៊ូកក់សក់កាវៀពីរដប ដែលលក់ដាច់បំផុត។ ការថែទាំទន់រលោង ជាមួយក្លិនក្រអូបឆើតឆាយ សម្រាប់ការសម្អាតបែបសាឡនរាល់ថ្ងៃ។">
+          Two bottles of our best-selling Caviar Shampoo. Silky care with an elegant aroma for a refreshing, salon-quality cleanse every day.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Caviar Shampoo × 2 · 500ml each" data-kh="សាប៊ូកក់សក់កាវៀ × ២ · 500ml នីមួយៗ">Caviar Shampoo × 2 · 500ml each</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">$18 <small data-en="Set of 2" data-kh="ឈុត ២">Set of 2</small></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. MEN SHOWER GEL SET -->
+    <div class="product">
+      <div class="product-image">
+        <img src="twg-men-shower-set.png" alt="TWG Men shower gel set, two bottles" data-lightbox>
+      </div>
+      <div class="product-info">
+        <div class="product-number" data-en="05 — For Him" data-kh="០៥ — សម្រាប់បុរស">05 — For Him</div>
+        <h3>
+          <span data-en="TWG Men" data-kh="TWG បុរស">TWG Men</span>
+          <em data-en="Shower Gel" data-kh="សាប៊ូដុសខ្លួន">Shower Gel</em>
+          <span data-en="Set" data-kh="ឈុត">Set</span>
+        </h3>
+        <p class="description"
+           data-en="A specialized formula for modern men. Deep cleansing, moisturizing, and long-lasting fragrance — stay fresh and confident all day."
+           data-kh="រូបមន្តពិសេសសម្រាប់បុរសសម័យទំនើប។ សម្អាតជ្រៅ ផ្តល់សំណើម និងក្លិនក្រអូបយូរអង្វែង — ស្រស់ស្អាត និងមានទំនុកចិត្តពេញមួយថ្ងៃ។">
+          A specialized formula for modern men. Deep cleansing, moisturizing, and long-lasting fragrance — stay fresh and confident all day.
+        </p>
+        <div class="product-items">
+          <span class="product-item" data-en="Men Shower Gel × 2 · 500ml each" data-kh="សាប៊ូដុសខ្លួនបុរស × ២ · 500ml នីមួយៗ">Men Shower Gel × 2 · 500ml each</span>
+        </div>
+        <div class="product-price-row">
+          <div class="product-price">$9.99 <small data-en="Set of 2" data-kh="ឈុត ២">Set of 2</small></div>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- ========================================================= -->
 
-  <footer>TWG — LUXURY YOU DESERVE</footer>
+  <!-- ================= FEATURES ================= -->
+  <section class="features" id="features">
+    <div class="section">
+      <div class="section-header">
+        <span class="label" data-en="Why TWG" data-kh="ហេតុអ្វី TWG">Why TWG</span>
+        <h2>
+          <span data-en="Thoughtfully" data-kh="រៀបចំយ៉ាង">Thoughtfully</span>
+          <em data-en="Crafted" data-kh="យកចិត្តទុកដាក់">Crafted</em>
+        </h2>
+        <p data-en="Every formula is designed to deliver visible results — with ingredients you can feel good about."
+           data-kh="រូបមន្តនីមួយៗ ត្រូវបានរចនាឡើងដើម្បីផ្តល់លទ្ធផលជាក់ស្តែង — ជាមួយសារធាតុដែលអ្នកអាចទុកចិត្តបាន។">
+          Every formula is designed to deliver visible results — with ingredients you can feel good about.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M9 3h6l1 3H8l1-3z"/>
+              <path d="M8 6l-2 4v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9l-2-4"/>
+            </svg>
+          </div>
+          <h4 data-en="Long-Lasting Scent" data-kh="ក្លិនក្រអូបយូរ">Long-Lasting Scent</h4>
+          <p data-en="Stay fresh and fragrant from morning to night with our signature blends."
+             data-kh="ស្រស់ស្អាត និងក្រអូបពីព្រឹកដល់យប់ ជាមួយក្លិនពិសេសរបស់យើង។">
+            Stay fresh and fragrant from morning to night with our signature blends.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2C8 6 5 10 5 14a7 7 0 0 0 14 0c0-4-3-8-7-12z"/>
+            </svg>
+          </div>
+          <h4 data-en="Gentle & Nourishing" data-kh="ទន់ភ្លន់ និងចិញ្ចឹម">Gentle &amp; Nourishing</h4>
+          <p data-en="Suitable for all skin and hair types — no harsh chemicals, ever."
+             data-kh="សមស្របសម្រាប់ស្បែក និងសក់គ្រប់ប្រភេទ — គ្មានសារធាតុគីមីខ្លាំងឡើយ។">
+            Suitable for all skin and hair types — no harsh chemicals, ever.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"/>
+              <path d="M12 7v5l3 3"/>
+            </svg>
+          </div>
+          <h4 data-en="24K Luxury Care" data-kh="ការថែទាំមាស 24K">24K Luxury Care</h4>
+          <p data-en="Infused with gold and premium botanicals to nourish and strengthen."
+             data-kh="លាយជាមួយមាស និងរុក្ខជាតិដ៏មានតម្លៃ ដើម្បីចិញ្ចឹម និងពង្រឹង។">
+            Infused with gold and premium botanicals to nourish and strengthen.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="8" width="18" height="13" rx="1"/>
+              <path d="M3 8h18M12 8v13M8 8a2 2 0 0 1 2-4h4a2 2 0 0 1 2 4"/>
+            </svg>
+          </div>
+          <h4 data-en="Elegant Packaging" data-kh="វេចខ្ចប់ឆើតឆាយ">Elegant Packaging</h4>
+          <p data-en="Beautifully designed bottles that make every set perfect for gifting."
+             data-kh="ដបរចនាយ៉ាងស្រស់ស្អាត ធ្វើឱ្យឈុតនីមួយៗសមស្របសម្រាប់ជាអំណោយ។">
+            Beautifully designed bottles that make every set perfect for gifting.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA / CONNECT ================= -->
+  <section class="cta-section" id="connect">
+    <div class="cta-inner">
+      <span class="cta-label" data-en="Get the Collection" data-kh="ទទួលបានបណ្តុំ">Get the Collection</span>
+      <h2>
+        <span data-en="Ready to" data-kh="ត្រៀម">Ready to</span>
+        <em data-en="Indulge?" data-kh="រីករាយ?">Indulge?</em>
+      </h2>
+      <p data-en="Visit the official site or follow for updates, new arrivals, and exclusive offers."
+         data-kh="ចូលទស្សនាគេហទំព័រផ្លូវការ ឬតាមដានសម្រាប់ព័ត៌មានថ្មី ផលិតផលថ្មី និងការផ្តល់ជូនពិសេស។">
+        Visit the official site or follow for updates, new arrivals, and exclusive offers.
+      </p>
+
+      <div class="cta-links">
+        <a class="cta-link primary" href="#" target="_blank" rel="noopener"
+           data-en="Visit the Official Website" data-kh="ចូលទស្សនាគេហទំព័រផ្លូវការ">Visit the Official Website</a>
+
+        <a class="cta-link" href="https://www.facebook.com/share/1ENkXzvJP1/?mibextid=wwXIfr" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+          Facebook
+        </a>
+
+        <a class="cta-link" href="https://t.me/cherri8888" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 2L11 13"/>
+            <path d="M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+          Telegram
+        </a>
+
+        <a class="cta-link" href="https://www.tiktok.com/@huarong15?_r=1&_t=ZS-99yira3JEph" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/>
+          </svg>
+          TikTok
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-logo">
+      <img src="logo.png" alt="TWG Fragrance logo" class="footer-logo-img">
+    </div>
+    <div class="footer-tagline" data-en="Luxury You Deserve" data-kh="ភាពប្រណិតដែលអ្នកសមនឹងទទួល">Luxury You Deserve</div>
+  </footer>
+
+  <!-- ================= LIGHTBOX ================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged product image">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close enlarged image">×</button>
+    <img src="" alt="" id="lightboxImg">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script>
+    /* ---------- LANGUAGE SWITCHER ---------- */
+    (function () {
+      const htmlRoot = document.getElementById('htmlRoot');
+      const body = document.body;
+      const btnEn = document.getElementById('btnEn');
+      const btnKh = document.getElementById('btnKh');
+      const i18nEls = document.querySelectorAll('[data-en][data-kh]');
+      const STORAGE_KEY = 'twg-lang';
+
+      function setLang(lang) {
+        htmlRoot.setAttribute('lang', lang === 'kh' ? 'km' : 'en');
+        body.classList.toggle('lang-kh', lang === 'kh');
+
+        i18nEls.forEach(function (el) {
+          const val = el.getAttribute(lang === 'kh' ? 'data-kh' : 'data-en');
+          if (val !== null) el.textContent = val;
+        });
+
+        btnEn.classList.toggle('active', lang === 'en');
+        btnKh.classList.toggle('active', lang === 'kh');
+
+        try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
+      }
+
+      btnEn.addEventListener('click', function () { setLang('en'); });
+      btnKh.addEventListener('click', function () { setLang('kh'); });
+
+      let saved = 'en';
+      try { saved = localStorage.getItem(STORAGE_KEY) || 'en'; } catch (e) {}
+      setLang(saved);
+    })();
+
+    /* ---------- NAV SCROLL ---------- */
+    (function () {
+      const nav = document.getElementById('nav');
+      let ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(function () {
+            nav.classList.toggle('scrolled', window.scrollY > 30);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    })();
+
+    /* ---------- MOBILE MENU ---------- */
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', function () {
+        links.classList.toggle('mobile-open');
+      });
+      links.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          links.classList.remove('mobile-open');
+        });
+      });
+    })();
+
+    /* ---------- LIGHTBOX ---------- */
+    (function () {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const closeBtn = document.getElementById('lightboxClose');
+
+      function openLightbox(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightboxCaption.textContent = alt || '';
+        lightbox.classList.add('active');
+        document.body.classList.add('lightbox-open');
+        closeBtn.focus();
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.classList.remove('lightbox-open');
+        setTimeout(function () {
+          if (!lightbox.classList.contains('active')) {
+            lightboxImg.src = '';
+          }
+        }, 400);
+      }
+
+      document.addEventListener('click', function (e) {
+        const img = e.target.closest('img[data-lightbox]');
+        if (img) {
+          e.preventDefault();
+          openLightbox(img.src, img.alt);
+        }
+      });
+
+      closeBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        closeLightbox();
+      });
+
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+      });
+    })();
+
+    /* ---------- HERO CAROUSEL ---------- */
+    (function () {
+      const carousel = document.getElementById('heroCarousel');
+      if (!carousel) return;
+
+      const slides = carousel.querySelectorAll('.hero-slide');
+      const dotsWrap = document.getElementById('heroDots');
+      let current = 0;
+      let timer = null;
+
+      // ⬇️ CHANGE THIS NUMBER TO ADJUST SPEED (milliseconds) ⬇️
+      const INTERVAL = 4000; // 4 seconds per slide
+      // ⬆️ CHANGE THIS NUMBER TO ADJUST SPEED (milliseconds) ⬆️
+
+      slides.forEach(function (_, i) {
+        const dot = document.createElement('button');
+        dot.setAttribute('role', 'tab');
+        dot.setAttribute('aria-label', 'Show slide ' + (i + 1));
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', function () {
+          goTo(i);
+          restart();
+        });
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = dotsWrap.querySelectorAll('button');
+
+      function goTo(index) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+      }
+
+      function next() { goTo(current + 1); }
+      function start() { stop(); timer = setInterval(next, INTERVAL); }
+      function stop()  { if (timer) { clearInterval(timer); timer = null; } }
+      function restart() { stop(); start(); }
+
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) stop();
+        else start();
+      });
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+      start();
+    })();
+  </script>
 
 </body>
 </html>
